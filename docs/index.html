@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Response Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Phone Response Simulator</h1>
+            <p>Enter your Input ID to generate the Response Code</p>
+        </header>
+        
+        <main>
+            <div class="input-section">
+                <label for="input-id">Input ID:</label>
+                <textarea 
+                    id="input-id" 
+                    placeholder="Enter your Input ID here (e.g., 298011-913686-508043-363303-233555-258502-178954-424100-254921)"
+                    rows="3"
+                ></textarea>
+                <button id="generate-btn" onclick="generateResponseCode()">Generate Response Code</button>
+            </div>
+            
+            <div class="output-section">
+                <label for="response-code">Response Code:</label>
+                <textarea 
+                    id="response-code" 
+                    readonly 
+                    placeholder="Your Response Code will appear here..."
+                    rows="3"
+                ></textarea>
+                <button id="copy-btn" onclick="copyToClipboard()" style="display: none;">Copy to Clipboard</button>
+            </div>
+            
+            <div id="status" class="status"></div>
+        </main>
+        
+        <footer>
+            <div class="info">
+                <h3>Instructions:</h3>
+                <ol>
+                    <li>Enter your Input ID in the text area above</li>
+                    <li>Click "Generate Response Code"</li>
+                    <li>Use the generated Response Code as needed</li>
+                </ol>
+                
+                <div class="warning">
+                    <strong>Note:</strong> This tool is for educational and research purposes only.
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Load WASM module first -->
+    <script src="phone_response.js"></script>
+    <!-- Then load our script -->
+    <script src="script.js"></script>
+</body>
+</html>
