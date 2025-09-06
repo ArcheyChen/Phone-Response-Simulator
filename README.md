@@ -2,6 +2,8 @@
 
 A cross-platform phone response simulator with both command-line and web interfaces.
 
+**Try the live demo:** https://archeychen.github.io/Phone-Response-Simulator/
+
 ## ⚠️ Disclaimer
 
 This project's source code and algorithms were found online. I don't know what the original purpose was. For convenience and testing purposes, I've wrapped it into both command-line and web versions to make it easier for everyone to test and experiment with.
